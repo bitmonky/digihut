@@ -3,12 +3,11 @@
 Plugin Name: digiHut
 Description: Inserts custom JavaScript code to the footer of each page using a control panel in the WordPress editor.
 Version: 1.0
-Author: Your Name
+Author: Guerrilla Soft
 */
 
 // Enqueue the JavaScript file and add the related <div> to the footer
 function digiHut_custom_javascript_footer() {
-    wp_enqueue_script('digiHut-custom-js', plugin_dir_url(__FILE__) . 'digiHut-custom.js', array(), '1.0', true);
     $fname = dirname(__FILE__).'/digihut.js';
     $digiScript =  file_get_contents($fname);
     echo $digiScript;
